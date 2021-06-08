@@ -14,8 +14,8 @@ import './App.css';
 // import UseReducerHook from './Components/Hooks/UseReducerHook';
 // import FatherCom from './Components/Hoc/FatherCom';
 // import HocTest from './Components/Hoc/HocTest';
-import Game from './Tictactoe/Game'
-// import RouterTest from './RouterTest/RouterTest'
+// import Game from './Tictactoe/Game'
+import RouterTest from './RouterTest/RouterTest'
 // import ReduxTest from './ReduxTest/ReduxTest'
 
 function App() {
@@ -48,8 +48,8 @@ function App() {
         {/* <UseReducerHook /> */}
         {/* <FatherCom /> */}
         {/* <HocTest name='wang' value="value001"/> */}
-        <Game />
-        {/* <RouterTest /> */}
+        {/* <Game /> */}
+        <RouterTest />
         {/* <ReduxTest /> */}
       </header>
     </div>

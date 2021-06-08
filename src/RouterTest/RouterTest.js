@@ -2,7 +2,6 @@ import React, {Component, Fragment} from 'react';
 import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
 import About from './About/index';
 import Home from './Home/index';
-import TodoList from './../TodoList/TodoList';
 import MyNavLink from './MyNavLink'
 
 class RouterTest extends Component {
@@ -57,7 +56,6 @@ class RouterTest extends Component {
             <div>
               RouterTest
               <br/>
-              {/* <TodoList /> */}
               {/* <div style={{width: '200px', backgroundColor: 'white'}}> */}
                 {/* 编写路由链接，在React中靠路由链接实现切换组件 */}
                 {/* <NavLink to='/about'>About</NavLink><br/>
