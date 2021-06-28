@@ -23,6 +23,7 @@ class Home extends Component {
                 <MyNavLink to='/home/info' children={'Info'}/>
               </div>
               <br/>
+              <br/>
               <div>
                 <Switch>
                   <Route path="/home/news" component={News}/>
