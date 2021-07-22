@@ -2,7 +2,7 @@ import React from 'react';
 // import logo from './logo.svg';
 import './App.css';
 // import TodoList from './TodoList/TodoList';
-// import TodoList from './Components/TodoList/TodoList';
+import TodoList from './Components/TodoList/TodoList';
 // import FunDemo from './Components/Hooks/FunDemo';
 // import ClassDemo from './Components/Hooks/ClassDemo';
 // import ContextHooks from './Components/Hooks/ContextHooks';
@@ -15,7 +15,7 @@ import './App.css';
 // import FatherCom from './Components/Hoc/FatherCom';
 // import HocTest from './Components/Hoc/HocTest';
 // import Game from './Tictactoe/Game'
-import RouterTest from './RouterTest/RouterTest'
+// import RouterTest from './RouterTest/RouterTest'
 // import ReduxTest from './ReduxTest/ReduxTest'
 
 function App() {
@@ -34,7 +34,7 @@ function App() {
         >
           Learn React
         </a> */}
-        {/* <TodoList /> */}
+        <TodoList />
         {/* Learn React */}
         {/* <TodoList /> */}
         {/* <FunDemo /> */}
@@ -49,7 +49,7 @@ function App() {
         {/* <FatherCom /> */}
         {/* <HocTest name='wang' value="value001"/> */}
         {/* <Game /> */}
-        <RouterTest />
+        {/* <RouterTest /> */}
         {/* <ReduxTest /> */}
       </header>
     </div>
