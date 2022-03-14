@@ -1,5 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react'
-import './todoList.css';
+import React, { useState, useEffect, useRef } from 'react';
 
 const listOrigin = [
   {
@@ -11,22 +10,24 @@ const listOrigin = [
   }
 ]
 
-function TodoList() {
+const TodoList = () => {
 
-  const [list, setList] = useState(
-    listOrigin
-  )
+  const [list, setList] = useState(listOrigin)
+  const [num, setNum] = useState(0)
 
   const [updateTime, setUpdateTime] = useState(null)
-  const [num, setNum] = useState(1)
 
   const myRef = useRef()
 
   useEffect(()=>{
     setUpdateTime(new Date().toLocaleString())
-  }, [list])
+    console.log('----- TodoItem update -----')
+    return () => {
+      console.log('----- TodoItem destory -----')
+    }
+  }, [list, num])
 
-  // 添加
+  // addItem
   const addItem = () => {
     if(!myRef.current.value || list.find((e) => { return e.action === myRef.current.value })) {
       alert('请输入内容或内容重复')
@@ -40,53 +41,36 @@ function TodoList() {
     myRef.current.value = ''
   }
 
-  // 删除
+  // deleteItem
   const deleteItem = (index) => {
     const newList = [...list]
     newList.splice(index, 1)
     setList(newList)
   }
 
-  // 更新单项
+  // updateItem
   const updateItem = (index) => {
     const newList = [...list]
     newList[index]['complete'] = !newList[index]['complete']
     setList(newList)
   }
 
-  const allData = ()=> {
-    setNum(1)
-    const newList = [...listOrigin]
-    setList(newList)
-  } 
-
-  const isComplete = ()=> {
-    setNum(2)
-    const newList = listOrigin.filter((e) => {
-      return e.complete
-    })
-    setList(newList)
-  } 
-
-  const notComplete = ()=> {
-    setNum(3)
-    const newList = listOrigin.filter((e) => {
-      return !e.complete
-    })
-    console.log(newList)
-    setList(newList)
-  } 
+  // addNum
+  const addNum = () => {
+    let newNum = num
+    setNum(++newNum)
+  }
 
   return (
     <div>
-      <div>更新时间：{updateTime}</div>
-      <br/>
+      <div>updateTime: {updateTime}</div>
+      <br />
       
       <div style={{display: 'flex', justifyContent: 'space-between'}}>
         <input type="text" ref={myRef}/>
-        <button onClick={addItem}>添加</button>
+        <button onClick={addItem}>ADD</button>
       </div>
-      <br/>
+      <br />
 
       {
         list.map((item, index) => {
@@ -95,22 +79,23 @@ function TodoList() {
       }
       <br />
       <br />
-      <div>{num}</div>
-      <button onClick={()=>{allData()}}>全部</button>
-      <button onClick={()=>{isComplete()}}>完成</button>
-      <button onClick={()=>{notComplete()}}>未完成</button>
+      
+      <div style={{display: 'flex', justifyContent: 'space-between'}}>
+        <div>{num}</div>
+        <button onClick={()=>{addNum()}}>addNum</button>
+      </div>
     </div>
   );
 }
 
-// 列表的每一项
-function TodoItem({item, index, deleteItem, updateItem}) {
+// TodoItem
+const TodoItem = ({item, index, deleteItem, updateItem}) => {
 
   return (
     <div style={{display: 'flex', justifyContent: 'space-between'}}>
       <div style={{color: item.complete?'green':'red'}}>{item.action}</div>
-      <button onClick={()=>{updateItem(index)}}>{item.complete?'完成':'未完成'}</button>
-      <button onClick={()=>{deleteItem(index)}}>删除</button>
+      <button onClick={()=>{updateItem(index)}}>{item.complete?'completed':'uncompleted'}</button>
+      <button onClick={()=>{deleteItem(index)}}>DELETE</button>
     </div>
   )
 }

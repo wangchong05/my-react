@@ -2,7 +2,7 @@ import React from 'react';
 // import logo from './logo.svg';
 import './App.css';
 // import TodoList from './TodoList/TodoList';
-import TodoList from './Components/TodoList/TodoList';
+// import TodoList from './Components/TodoList/TodoList';
 // import FunDemo from './Components/Hooks/FunDemo';
 // import ClassDemo from './Components/Hooks/ClassDemo';
 // import ContextHooks from './Components/Hooks/ContextHooks';
@@ -14,9 +14,10 @@ import TodoList from './Components/TodoList/TodoList';
 // import UseReducerHook from './Components/Hooks/UseReducerHook';
 // import FatherCom from './Components/Hoc/FatherCom';
 // import HocTest from './Components/Hoc/HocTest';
-// import Game from './Tictactoe/Game'
-// import RouterTest from './RouterTest/RouterTest'
-// import ReduxTest from './ReduxTest/ReduxTest'
+// import Game from './Tictactoe/Game';
+// import RouterTest from './RouterTest/RouterTest';
+// import ReduxTest from './ReduxTest/ReduxTest';
+import RouterPage from './Components/RouterPage';
 
 function App() {
   return (
@@ -34,7 +35,7 @@ function App() {
         >
           Learn React
         </a> */}
-        <TodoList />
+        {/* <TodoList /> */}
         {/* Learn React */}
         {/* <TodoList /> */}
         {/* <FunDemo /> */}
@@ -51,6 +52,7 @@ function App() {
         {/* <Game /> */}
         {/* <RouterTest /> */}
         {/* <ReduxTest /> */}
+        <RouterPage />
       </header>
     </div>
   );
