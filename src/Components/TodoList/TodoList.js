@@ -78,9 +78,7 @@ const TodoList = () => {
         })
       }
       <br />
-      <br />
-      
-      <div style={{display: 'flex', justifyContent: 'space-between'}}>
+      <div style={{display: 'flex', justifyContent: 'space-between', padding: '10px'}}>
         <div>{num}</div>
         <button onClick={()=>{addNum()}}>addNum</button>
       </div>
@@ -92,7 +90,7 @@ const TodoList = () => {
 const TodoItem = ({item, index, deleteItem, updateItem}) => {
 
   return (
-    <div style={{display: 'flex', justifyContent: 'space-between'}}>
+    <div style={{display: 'flex', justifyContent: 'space-between', padding: '10px'}}>
       <div style={{color: item.complete?'green':'red'}}>{item.action}</div>
       <button onClick={()=>{updateItem(index)}}>{item.complete?'completed':'uncompleted'}</button>
       <button onClick={()=>{deleteItem(index)}}>DELETE</button>

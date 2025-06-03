@@ -22,8 +22,8 @@ import RouterPage from './Components/RouterPage';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        {/* <img src={logo} className="App-logo" alt="logo" />
+      {/* <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
@@ -34,26 +34,26 @@ function App() {
           rel="noopener noreferrer"
         >
           Learn React
-        </a> */}
-        {/* <TodoList /> */}
-        {/* Learn React */}
-        {/* <TodoList /> */}
-        {/* <FunDemo /> */}
-        {/* <ClassDemo /> */}
-        {/* <ContextHooks /> */}
-        {/* <MyHook /> */}
-        {/* <MyHook2 /> */}
-        {/* <UseCallbackDemo /> */}
-        {/* <HocDemo /> */}
-        {/* <PageOne /> */}
-        {/* <UseReducerHook /> */}
-        {/* <FatherCom /> */}
-        {/* <HocTest name='wang' value="value001"/> */}
-        {/* <Game /> */}
-        {/* <RouterTest /> */}
-        {/* <ReduxTest /> */}
-        <RouterPage />
-      </header>
+        </a>
+      </header> */}
+      {/* <TodoList /> */}
+      {/* Learn React */}
+      {/* <TodoList /> */}
+      {/* <FunDemo /> */}
+      {/* <ClassDemo /> */}
+      {/* <ContextHooks /> */}
+      {/* <MyHook /> */}
+      {/* <MyHook2 /> */}
+      {/* <UseCallbackDemo /> */}
+      {/* <HocDemo /> */}
+      {/* <PageOne /> */}
+      {/* <UseReducerHook /> */}
+      {/* <FatherCom /> */}
+      {/* <HocTest name='wang' value="value001"/> */}
+      {/* <Game /> */}
+      {/* <RouterTest /> */}
+      {/* <ReduxTest /> */}
+      <RouterPage />
     </div>
   );
 }
